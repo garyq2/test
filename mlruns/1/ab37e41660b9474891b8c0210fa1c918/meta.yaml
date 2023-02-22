@@ -1,0 +1,15 @@
+artifact_uri: file:///home/q/Projects/flutter/test/mlruns/1/ab37e41660b9474891b8c0210fa1c918/artifacts
+end_time: 1677028223739
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: ab37e41660b9474891b8c0210fa1c918
+run_uuid: ab37e41660b9474891b8c0210fa1c918
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1677028223718
+status: 3
+tags: []
+user_id: q
