@@ -1,6 +1,6 @@
 [core]
     remote = temp
 ['remote "dvc-remote"']
-    url = ../../data_store
+    url = /tmp/dvcstore
 ['remote "temp"']
     url = /tmp/dvcstore

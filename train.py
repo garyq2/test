@@ -19,14 +19,14 @@ logger = logging.getLogger(__name__)
 import dvc.api
 
 path = 'data/winquality-red.csv'
-repo='/home/q/Projects/flutter/test'
-version = 'v1'
+repo='/tmp/dvcstore'
+#repo = 'https://github.com/garyq2/test'
+#version = 'v3'
 
-data_url = dvc.api.get_url(
-    path=path,
-    repo=repo,
-    rev=version
-)
+# data_url = dvc.api.get_url(
+#     path=path,
+#     repo=repo
+# )
 
 mlflow.set_experiment('test')
 
@@ -43,11 +43,12 @@ if __name__=="__main__":
 
 
     # Read the wine-quality csv file from the remote repository
-    data = pd.read_csv(data_url, sep=",")
+    # data = pd.read_csv(data_url, sep=",")
+    data = pd.read_csv('data/winequality-red.csv', sep=",")
 
     #Log data params
-    mlflow.log_param('data_url', data_url)
-    mlflow.log_param('data_version', version)
+    #mlflow.log_param('data_url', data_url)
+    #mlflow.log_param('data_version', version)
     mlflow.log_param('random_state', random_state)
     mlflow.log_param('input_rows', data.shape[0])
     mlflow.log_param('input_cols', data.shape[1])
